@@ -2,9 +2,24 @@
 
 An intelligent travel planning application that uses **Claude AI (via AWS Bedrock)** to autonomously research flights, hotels, transport, local customs, and generate detailed day-by-day itineraries with real-time streaming updates.
 
+## Screenshots
+
+### Home Page - Trip Preferences Form
+
+![Home Page](images/home_page.jpeg)
+
+### Research Starting
+
+![Search Page](images/start_page.jpeg)
+
+### Research In Progress - Live Search Log
+
+![Start Page](images/search_page.jpeg)
+
 ## Tech Stack
 
 ### Backend
+
 - **FastAPI** - Python web framework
 - **Uvicorn** - ASGI server
 - **AWS Bedrock** - Claude Opus 4.6 for AI-powered research
@@ -13,12 +28,14 @@ An intelligent travel planning application that uses **Claude AI (via AWS Bedroc
 - **boto3** - AWS SDK
 
 ### Frontend
+
 - **React 19** (TypeScript)
 - **Vite** - Build tool & dev server
 - **Tailwind CSS** - Styling
 - **react-markdown** - Markdown rendering with GFM support
 
 ### Deployment
+
 - **Backend** - Render
 - **Frontend** - Vercel
 
@@ -71,14 +88,14 @@ TravelAgent/
 
 ## API Endpoints
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/health` | GET | Health check |
-| `/api/research` | POST | Start a new research session |
-| `/api/research/{id}/stream` | GET | SSE stream for real-time events |
-| `/api/research/{id}/results` | GET | Get research results & status |
-| `/api/research/{id}/chat` | POST | Ask follow-up questions |
-| `/api/research/{id}/download` | GET | Download plan as markdown |
+| Endpoint                        | Method | Description                     |
+| ------------------------------- | ------ | ------------------------------- |
+| `/api/health`                 | GET    | Health check                    |
+| `/api/research`               | POST   | Start a new research session    |
+| `/api/research/{id}/stream`   | GET    | SSE stream for real-time events |
+| `/api/research/{id}/results`  | GET    | Get research results & status   |
+| `/api/research/{id}/chat`     | POST   | Ask follow-up questions         |
+| `/api/research/{id}/download` | GET    | Download plan as markdown       |
 
 ## Getting Started
 
