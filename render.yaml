@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: travelai-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: AWS_ACCESS_KEY_ID
+        sync: false        # set manually in Render dashboard
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_BEDROCK_REGION
+        value: us-east-1
+      - key: FRONTEND_URL
+        sync: false        # e.g. https://travelai.vercel.app

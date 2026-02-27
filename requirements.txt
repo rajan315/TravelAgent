@@ -1,0 +1,6 @@
+boto3
+rich
+fastapi
+uvicorn
+sse-starlette
+pydantic
